@@ -1,1 +1,84 @@
-CaseStudy
+package orderingsystem;
+import java.util.Scanner;
+public class OrderingSystem{
+    static Scanner sc = new Scanner(System.in);
+    static double Meal;
+    static int count = 0, qCount = 0;
+    static double oQuantity, sum = 0, oTotal = 0;
+    static boolean bool;
+    public static void main(String[] args) {
+        
+        PersonalInfo PI = new PersonalInfo();
+        Menu M = new Menu();
+        OrderDetails OD = new OrderDetails();
+        Receipt R = new Receipt();
+        
+        System.out.print("Enter your Name: ");
+        PI.setName(sc.nextLine());
+        System.out.print("Enter your Age: ");
+        PI.setAge(sc.nextInt());
+        System.out.print("Enter your Address: ");
+        sc.nextLine();
+        PI.setAddress(sc.nextLine());
+        System.out.print("Enter your Phone Number: ");
+        PI.setPNumber(sc.nextLine());
+        
+        M.menuMeals(); 
+        
+        try { 
+            System.out.print("\nEnter the Code of your Order: ");  
+            Meal = OD.M[count = sc.nextInt()];
+            sum += Meal;
+            System.out.print("Quantity: ");
+            OD.setQuantity(qCount = sc.nextInt());
+            OD.oTot();       
+            OD.order();
+        }   catch (Exception e){
+            System.out.println("The Code you input is not in the Menu, choose another code list in the Menu: ");
+            Meal = OD.M[count = sc.nextInt()];
+            sum += Meal;
+            System.out.print("Quantity: ");
+            OD.setQuantity(qCount = sc.nextInt());
+            OD.oTot();   
+            OD.order();
+        }
+        
+        do {           
+            if(bool == true){
+            OD.AnythingElse();
+            }
+            System.out.print("\nAnything else?\ntype \'true\' to order/type \'false\' if nothing else: ");
+        } while(bool = sc.nextBoolean() == true);
+        
+        PI.printPI();
+        //Aldrin F. Latoga Method 10 and 11
+        if(PI.age >= 60){
+            double senDiscount;
+            double disc;
+            disc = oTotal * .2;
+            senDiscount = oTotal - disc;
+            System.out.println("\nSenior Discount Total Amount: P" + senDiscount + "0");
+            
+            System.out.print("\nInput your Payment: ");
+            R.setPayment(sc.nextDouble());
+            while (R.payment < senDiscount){
+                    System.out.print("Insufficient payment, please input sufficient payment: ");
+                    R.setPayment(sc.nextDouble());
+            } if (R.payment >= senDiscount){
+                    R.change = R.payment - senDiscount; 
+                    System.out.print("Change: P" + R.change + "0\n");
+                }
+            }
+            System.out.println("\nTotal Amount: P" + oTotal + "0");
+            System.out.print("\nInput your Payment: ");
+            R.setPayment(sc.nextDouble());
+            while (R.payment < oTotal){
+            System.out.print("Insufficient payment, please input sufficient payment: ");
+            R.setPayment(sc.nextDouble());
+            } if (R.payment >= oTotal){
+            R.change = R.payment - oTotal; 
+            System.out.print("Change: P" + R.change + "0\n");
+        }   
+    }
+}
+
