@@ -1,0 +1,45 @@
+package orderingsystem;
+public class Menu {
+    public void menuMeals(){
+    System.out.println("\n------------------------- MENU -------------------------");
+    System.out.println("MEALS:\n\tCODE\t\t\t\t\tPRICE"
+            + "\n\t0   - Instant Pot Oatmeal\t\tP150.00"
+            + "\n\t1   - Avocado Toast\t\t\tP150.00"
+            + "\n\t2   - Cottage Cheese and Fruit\t\tP155.00"
+            + "\n\t3   - Bagel and Cream Cheese\t\tP155.00"
+            + "\n\t4   - Scramble Egg with Salsa\t\tP155.00"
+            + "\n\t5   - Eggs Benedict\t\t\tP160.00"
+            + "\n\t6   - Yogurt with Fruit or Granola\tP160.00"
+            + "\n\t7   - Kung Pao Shrimp\t\t\tP180.00"
+            + "\n\t8   - Steak Borrito Bowl\t\tP180.00"
+            + "\n\t9   - Italian Pasta Salad\t\tP185.00"
+            + "\n\t10  - Best Tuna Salad\t\t\tP185.00"
+            + "\n\t11  - Curried Chicken Salad \t\tP190.00"
+            + "\n\t12  - Buddha Noodles\t\t\tP190.00"
+            + "\n\t13  - Mexican Chicken Soup\t\tP200.00");
+    System.out.println("\nDRINKS:"
+            + "\n\t14  - Peach Matcha Smoothie\t\tP80.00"
+            + "\n\t15  - Matcha Green Tea Ginger Beer\tP80.00"
+            + "\n\t16  - Coconut Milk Thai Iced Coffee\tP80.00"
+            + "\n\t17  - Smoky Iced Tea\t\t\tP90.00"
+            + "\n\t18  - Almond Moon Milk\t\t\tP90.00"
+            + "\n\t19  - Lychee and Mint Cooler\t\tP90.00"
+            + "\n\t20  - Sparkling Vietnamese Limeade\tP100.00"
+            + "\n\t21  - Korean Mule\t\t\tP100.00"
+            + "\n\t22  - Strawberry Soju Slushie\t\tP100.00"
+            + "\n\t23  - Korean Yogurt Soju\t\tP100.00");
+    System.out.println("\nDESSERTS:"
+            + "\n\t24  - Oreo Truffles\t\t\tP120.00"
+            + "\n\t25  - Samoa Dessert Lasagna\t\tP120.00"
+            + "\n\t26  - Chocolate Covered Oreos\t\tP120.00"
+            + "\n\t27  - Chocolate Pudding\t\t\tP135.00"
+            + "\n\t28  - Vanilla Pudding\t\t\tP135.00"
+            + "\n\t29  - Cookie Dough Ice Cream Sandwich\tP140.00"
+            + "\n\t30  - Neopolitan Bundt Cake\t\tP140.00"
+            + "\n\t31  - Swiss Roll Cake\t\t\tP140.00"
+            + "\n\t32  - Slutty Cheesecake Bars\t\tP150.00"
+            + "\n\t33  - Confetti Squares\t\t\tP150.00"
+            + "\n\t34  - Brownie Lasagna\t\t\tP150.00");
+    }
+}
+
