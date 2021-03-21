@@ -1,0 +1,43 @@
+package orderingsystem;
+public class PersonalInfo {
+    String name;
+    String address;
+    int age;
+    String phoneNumber;
+    
+    public void setName(String sName){
+        name = sName;
+    }
+    public String getName(){
+        return name;
+    }
+    
+    public void setAge(int sAge){
+        age = sAge;
+    }
+    public int getAge(){
+        return age;
+    }
+    // Dimarucot Paolo
+//Method 3
+    public void setAddress(String sAddress){
+        address = sAddress;
+    }
+    public String getAddress(){
+        return address;
+    }
+    // Method 4
+    public void setPNumber(String sPNumber){
+        phoneNumber = sPNumber;
+    }
+    public String getPNumber(){
+        return phoneNumber;
+    }
+    
+    public void printPI(){
+        System.out.println("\nName: " + name);
+        System.out.println("Age: " + age);
+        System.out.println("Address: " + address);
+        System.out.println("Phone Number: " + phoneNumber);
+    }
+}
