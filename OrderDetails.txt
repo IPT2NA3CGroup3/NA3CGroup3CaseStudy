@@ -1,0 +1,77 @@
+package orderingsystem;
+public class OrderDetails extends OrderingSystem {
+    public int order;
+    public int quantity;
+    OrderingSystem OS = new OrderingSystem();
+ 
+    double[] M = {150.000,150.000,155.000,155.000,155.000,160.00,160.00,180.00,180.00,185.00,185.00,190.00,190.00,200.00,80.00,80.00,80.00,90.00,90.00,90.00,100.00,100.00,100.00,100.00,120.00,120.00,120.00,135.00,135.00,140.00,140.00,140.00,150.00,150.00,150.00};
+    String[] Des = {"Instant Pot Oatmeal"
+            ,"Avocado Toast"
+            ,"Cottage Cheese and Fruit"
+            ,"Bagel and Cream Cheese"
+            ,"Scramble Egg with Salsa"
+            ,"Eggs Benedict"
+            ,"Yogurt with Fruit or Granola"
+            ,"Kung Pao Shrimp"
+            ,"Steak Borrito Bowl"
+            ,"Italian Pasta Salad"
+            ,"Best Tuna Salad"
+            ,"Curried Chicken Salad"
+            ,"Buddha Noodles"
+            ,"Mexican Chicken Soup"
+            ,"Peach Matcha Smoothie"
+            ,"Matcha Green Tea Ginger Beer"
+            ,"Coconut Milk Thai Iced Coffee"
+            ,"Smoky Iced Tea"
+            ,"Almond Moon Milk"
+            ,"Lychee and Mint Cooler"
+            ,"Sparkling Vietnamese Limeade"
+            ,"Korean Mule"
+            ,"Strawberry Soju Slushie"
+            ,"Korean Yogurt Soju"
+            ,"Oreo Truffles"
+            ,"Samoa Dessert Lasagna"
+            ,"Chocolate Covered Oreos"
+            ,"Chocolate Pudding"
+            ,"Vanilla Pudding"
+            ,"Cookie Dough Ice Cream Sandwich"
+            ,"Neopolitan Bundt Cake"
+            ,"Swiss Roll Cake"
+            ,"Slutty Cheesecake Bars"
+            ,"Confetti Squares"
+            ,"Brownie Lasagna"};
+
+    //Aganon, Angel Princess
+  // Method 8
+    public void order(){
+        System.out.println(Des[OrderingSystem.count] + " ---------- " + "x"+ OrderingSystem.qCount + " P" + OrderingSystem.Meal + "0");
+    }
+    public int setQuantity(int sQty){
+        return quantity = sQty;
+    }
+    public double oTot(){
+        oQuantity = quantity * sum;
+        return oTotal = oQuantity;
+    }
+
+//Method 9
+    public void AnythingElse(){
+        System.out.print("\nEnter the Code of your Order: ");   
+        try { 
+            Meal = M[count = sc.nextInt()];
+            sum += Meal;
+            System.out.print("Quantity: ");
+            setQuantity(qCount = sc.nextInt());
+            oTot();
+            order();
+        }   catch (Exception e){
+            System.out.println("The Code you input is not in the Menu, choose another code list in the Menu: ");
+            Meal = M[count = sc.nextInt()];
+            sum += Meal;
+            System.out.print("Quantity: ");
+            setQuantity(qCount = sc.nextInt());
+            oTot();
+            order();            
+        }
+    }
+}
